@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>농부의 아침</title>
+    <style>
+     @font-face{
+            font-family: 'SSFLOWERROAD';
+            src: url('SSFLOWERROAD.ttf') format('truetype');
+    }
+    body
+    {
+        font-family: SSFLOWERROAD;
+    }
+    *{
+      margin:0;
+      padding:0;
+      list-style-type: none;
+    }
+    body
+    {
+      background-color: white;
+      background-size : 100% 75%;
+      background-repeat: no-repeat;
+    }
+
+    .top-nav{
+      height: 10px;
+    }
+
+    .login-etc{
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .login-etc > li{
+      padding: 0px 10px;
+      margin-top: 1%;
+      font-size: 16px;
+      margin-right: px;
+    }
+
+    .top-bar{
+      display: flex;
+      justify-content: center;
+      margin-top: -5.5%;
+    }
+
+    .top-bar > li{
+      font-size: 20px;
+      padding: 0px 50px;
+    }
+
+    .line
+    {
+      margin-top: 0.1%;
+      font-size: 1rem;
+    }
+
+    .reload
+    {
+      text-align: center;
+      margin-bottom: 3%;
+    }
+
+    #kaleprice
+    {
+      font-size: 27px;
+      color: green;
+    }
+
+    #best1
+    {
+       color:gray;
+       position: absolute;
+       bottom: 58%;
+       left: 18%;
+    }
+    #number2
+    {
+      position: absolute;
+      left: 50%;
+      bottom: -75%;
+    }
+    .reload
+    {
+      text-align: center;
+      margin-bottom: 3%;
+    }
+    .top-nav{
+      height: 10px;
+    }
+
+    .login-etc{
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .login-etc > li{
+      padding: 0px 10px;
+      margin-top: 1%;
+      font-size: 18px;
+    }
+
+    .top-bar{
+      display: flex;
+      justify-content: center;
+      margin-top: -5.5%;
+    }
+
+    .line
+    {
+      margin-top: 1%;
+      font-size: 2rem;
+    }
+
+    .top-bar > li{
+      font-size: 1.2rem;
+      padding: 0px 50px;
+    }
+    .sikhye
+    {
+      position:absolute;
+      left: 15%;
+      bottom: 10%;
+    }
+    .tellsikhye
+    {
+      font-size: 32px;
+      position: absolute;
+      left:15%;
+      bottom: -5%;
+    }
+    .jadoo
+    {
+      position: absolute;
+      left: 40%;
+      bottom: 10%;
+    }
+    .telljadoo
+    {
+      font-size: 32px;
+      position: absolute;
+      left:40%;
+      bottom: -5%;
+    }
+    .abocado
+    {
+      position: absolute;
+      left: 67%;
+      bottom: 10%;
+    }
+    .tellabocado
+    {
+      font-size: 32px;
+      position: absolute;
+      left:67%;
+      bottom: -5%;
+    }
+    .chamchi
+    {
+      position: absolute;
+      left: 15%;
+      bottom: -50%;
+    }
+    .tellchamchi
+    {
+      font-size: 32px;
+      position: absolute;
+      left:15%;
+      bottom: -65%;
+    }
+    .gogi
+    {
+      position: absolute;
+      left: 40%;
+      bottom: -50%;
+    }
+    .tellgogi
+    {
+      font-size: 32px;
+      position: absolute;
+      left: 40%;
+      bottom: -65%;
+    }
+    .bean
+    {
+      position: absolute;
+      left:67%;
+      bottom: -50%;
+    }
+    .tellbean
+    {
+      font-size: 32px;
+      position: absolute;
+      left: 67%;
+      bottom: -65%;
+    }
+    .before
+    {
+      position: absolute;
+      left: 45%;
+      bottom: -75%;
+    }
+    </style>
+  <body>
+    <div class="top-nav">
+      <ul class="login-etc">
+        <li><a href ="join.html">회원가입</a></li>
+        <li><span class="user_name"></span>님</li>
+        <li><a href ="cstomer.html">고객센터</a></li>
+      </ul>
+      <div class ="reload"><img src ="picture/logo.png" width="330" height="300"/></div>
+      <ul class="top-bar">
+        <a href ="newitem.jsp"><li>신상품</li></a>
+            <a href ="bestitem.jsp"><li>베스트</li></a>
+            <a href ="donation.jsp"><li>기부현황</li></a>
+            <a href ="news.jsp"><li>소식</li></a>
+      </ul>
+    </div>
+
+      <div>
+          <img src ="picture/케일.png" width="300" height ="380" />
+          <p>즙용 유기농케일</p><h2 style ="color:#c9e86a">1,870원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/참외.png" width="300" height ="380" />
+          <p>저탄소 인증 성주 참외</p><h2 style ="color:#c9e86a">8,960원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/우유.png" width="300" height ="380" />
+          <p>무항생제 제주 목초 우유</p><h2 style ="color:#c9e86a">2,950원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/방울토마토.png" width="300" height ="380" />
+          <p>마틸다 토마토</p><h2 style ="color:#c9e86a">12,800원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/고등어.png" width="300" height ="380" />
+          <p>Hello! 노르웨이 고등어</p><h2 style ="color:#c9e86a">3,320원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/비트즙.png" width="300" height ="380" />
+          <p>무뇽약 제주 레드비트즙</p><h2 style ="color:#c9e86a">12,720원</h2>
+      </div>
+      
+      <div>
+          <img src ="picture/고구마.png" width="300" height ="380" />
+          <p>아이스 엿구마</p><h2 style ="color:#c9e86a">2,180원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/천도복숭아.png" width="300" height ="380" />
+          <p>유명산지 천도복숭아</p><h2 style ="color:#c9e86a">7,920원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/양배추.png" width="300" height ="380" />
+          <p>무농약 사보이 양배추</p><h2 style ="color:#c9e86a">3,510원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/생강식혜.png" width="300" height ="380" />
+          <p>생강식혜</p><h2 style ="color:#c9e86a">7,125원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/자두.png" width="300" height ="380" />
+          <p>후무사 자두</p><h2 style ="color:#c9e86a">6,750원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/아보카도.png" width="300" height ="380" />
+          <p>미국산 아보카도</p><h2 style ="color:#c9e86a">2,700원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/진참치액.png" width="300" height ="380" />
+          <p>진참치액</p><h2 style ="color:#c9e86a">11,100원</h2>
+      </div>
+      <div>
+          <img src ="picture/목살.png" width="300" height ="380" />
+          <p>한돈 목살 양념구이</p><h2 style ="color:#c9e86a">13,980원</h2>
+      </div>
+
+      <div>
+          <img src ="picture/대한약콩.png" width="300" height ="380" />
+          <p>대한약콩</p><h2 style ="color:#c9e86a">24,000원</h2>
+      </div>
+  </body>
+</html>

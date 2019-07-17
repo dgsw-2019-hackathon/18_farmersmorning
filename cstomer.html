@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>농부의 아침</title>
+    <style>
+        body{
+            width: 1600px;
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            width: 100%;
+            height: 500px;
+        }
+        .customer{
+            display: flex;
+            margin-left: 300px;
+            margin-top: 300px;
+            width: 100%;
+            height: 600px;
+        }
+        .sub-btn{
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            width: 150px;
+            padding: 0;
+        }
+        .sub-btn input{
+            cursor: pointer;
+            outline: none;
+            background-color: white;
+            border: none;
+            border-bottom: 1px solid black;
+            width: 150px;
+            height: 50px;
+        }
+        .notice{
+            margin-left: 150px;
+            width: 1000px;
+        }
+        .header{
+            width: 100%;
+            height: 50px;
+        }
+        .content-notice{
+            border-top: 4px solid green;
+            border-bottom: 2px solid black;
+            width: 100%;
+            height: 480px;
+        }
+        .head,.content{
+            display: flex;
+            margin: 20px 0px;
+            height: 40px;
+        
+        }
+        .head > .num{
+            margin:  0px 110px 0px 80px;
+        }
+        .head > .writer{
+            margin:  0px 40px 0px 120px;
+        }
+        .content > .num,.title,writer,.date,.look{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+     <div class="content">
+        <div class="customer">
+            <div class="center">
+                <p>고객센터</p>
+                <div class="sub-btn">
+                    <input type="button" value="공지사항" id="notice">
+                    <br>
+                    <input type="button" value="자주하는 질문" id="question">
+                    <br>
+                    <input type="button" value="1 : 1 문의" id="one-question"> 
+                </div>    
+            </div>
+            <div class="notice">
+                <div class="header">            
+                    <span style="font-size: 25px; font-weight: 500; padding: 0 15px 0 0;">공지사항</span>
+                    
+                    <span>농부의 아침의 새로운 소식들과 유용한 정보들을 만나보세요.</span>
+                </div>
+                <div class="content-notice">
+<!--                    번호 제목 작성자 작성일 조회-->
+                  <div class="head">
+                       <div class="num">번호</div>
+                       <div class="title">제목</div>
+                       <div class="writer">작성자</div>
+                       <div class="date">작성일</div>
+                       <div class="look">조회</div>
+                  </div>
+                  <div class="body">
+                     <div class="content">
+                          <div class="num">공지</div>
+                           <div class="title">개인정보 처리방침 개정</div>
+                           <div class="writer">쇠스랑</div>
+                           <div class="date">2019-07-16</div>
+                           <div class="look">12</div>
+                       </div>
+                       <div class="content">
+                          <div class="num">공지</div>
+                           <div class="title">개인정보 처리방침 개정</div>
+                           <div class="writer">쇠스랑</div>
+                           <div class="date">2019-07-16</div>
+                           <div class="look">12</div>
+                       </div>
+                       <div class="content">
+                          <div class="num">공지</div>
+                           <div class="title">개인정보 처리방침 개정</div>
+                           <div class="writer">쇠스랑</div>
+                           <div class="date">2019-07-16</div>
+                           <div class="look">12</div>
+                       </div><div class="content">
+                          <div class="num">공지</div>
+                           <div class="title">개인정보 처리방침 개정</div>
+                           <div class="writer">쇠스랑</div>
+                           <div class="date">2019-07-16</div>
+                           <div class="look">12</div>
+                       </div>
+                       <div>
+                       	   <input type="button" value="돌아가기" onclick="location.href='home.jsp'">
+                       </div>
+                  </div>
+                </div>
+            </div>
+         </div>    
+    </div>
+</body>
+</html>

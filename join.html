@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>농부의 아침</title>
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/uikit/uikit.min.css">
+<link rel="stylesheet" type="text/css" href="css/farmweb.css">
+<script src="js/uikit-icons.min.js"></script>
+<script src="js/uikit.min.js"></script>
+<script src="js/uikit-icons.js"></script>
+<style type="text/css">
+	 @font-face{
+                font-family: 'SSFLOWERROAD';
+                src: url('SSFLOWERROAD.ttf') format('truetype');
+            }
+	body{
+                font-family: SSFLOWERROAD;
+            }
+	label 
+	{
+		display: inline-block; 
+		width: 80px;
+		color: #49853F;
+	}
+	
+	input
+	{
+		width: 120px;
+	}
+
+</style>
+
+<script src="/jsp_study/js/jquery.js"></script>
+
+<script>
+var user = null;
+
+$(document).ready(function() {
+	showMyInfo();
+});
+
+function showMyInfo()
+{
+	$.ajax({
+		url: "myInfo",
+		success: function(response)
+		{
+			console.log(response);
+			if (response.code == "success")
+			{
+				$(".login").hide();
+				$(".logout").show();
+				
+				$("#user_name").html(response.data.name);
+				
+				user = response.data;
+			}
+			else
+			{
+				$(".login").show();
+				$(".logout").hide();
+				
+				user = null;
+			}
+		}
+	});
+}
+	function keyup()
+	{
+		var id = $("input[name='id']").val();
+		var password = $("input[name='password']").val();
+		var name = $("input[name='name']").val();		
+		
+		$.ajax({
+			url: "../idCheck.dgsw",
+			data: {id: id, password: password, name: name},
+			method: 'get',
+			success: function(response) {
+				console.log("결과", response);
+				
+				if (response == "Y")
+				{
+					$("[name='id']").css("border-color", "#F00");
+				}
+				else
+				{
+					$("[name='id']").css("border-color", "#0F0");
+				}
+			},
+			error: function(a, b) {
+				console.log(a, b);
+			}
+		});
+	}
+	
+</script>
+<style>
+	.uk-button
+	{
+		border-radius: 100px !important;
+	}
+	.logoimage {
+	     position: relative;
+	     left: 28%;
+		 text-align: center;
+   		 width: 150px;
+ 	  	 height: auto;
+	}
+</style>
+</head>
+<body>
+<div class="uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade" uk-height-viewport>
+	<div class="uk-width-1-1">
+		<div class="uk-container">
+			<div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+				<div class="uk-width-1-1@m">
+					<div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+						<div class="logoimage">
+									<img src="picture/logo.png" >
+						</div>
+						<form action="join.jsp" method="post" name="joinform">
+							<div class="uk-margin">
+								<div class="uk-inline uk-width-1-1">
+									<span class="uk-form-icon" uk-icon="icon: user"></span>
+									<input class="uk-input uk-form-large" type="text" name="user_id" id="user_id" placeholder="ID" onkeyup="keyup()">
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-inline uk-width-1-1">
+									<span class="uk-form-icon" uk-icon="icon: lock"></span>
+									<input class="uk-input uk-form-large" type="password" name="password" id="password" placeholder="PW">	
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-inline uk-width-1-1">
+									<span class="uk-form-icon" uk-icon="icon: pencil"></span>
+									<input class="uk-input uk-form-large" type="text" name="user_name" id="user_name" placeholder="NAME">	
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-inline uk-width-1-1">
+									<input class="uk-button container uk-button-primary uk-button-large uk-width-1-1" type="submit" value="회원가입" onClick="return check()">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
